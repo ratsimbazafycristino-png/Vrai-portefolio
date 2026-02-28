@@ -1,0 +1,376 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* Animé */
+body {
+    background: linear-gradient(-45deg, #00bcd4,#2196f3, #dfe2e4, #59caf0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* NAVIGATION */
+.navbar {
+    position: fixed; /* Reste en haut au défilement */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Ajuste la hauteur selon tes besoins */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; /* Espacement intérieur */
+    /* PARTIE IMPORTANTE  */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond BLANC très transparent (10%) */
+    backdrop-filter: blur(10px); /* L'effet de flou sur le contenu derrière */
+    -webkit-backdrop-filter: blur(10px); /* Version pour Safari/iOS */
+    
+    /* Petit contour fin pour accentuer l'effet */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Bordure blanche */
+    
+    /* Une ombre très douce pour décoller la barre du fond */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Ombre portée douce */
+    z-index: 1000; /* Pour qu'elle reste au-dessus */
+    transition: all 0.3s ease; /*  l'animation pour le scroll */
+}
+/* Style du Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #eeebe6; /* Bleu vif moderne */
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+/* rend l'emplaement en haut */
+.nav-links{
+    list-style:none;
+    display:flex;
+}
+.nav-links li{
+    margin-left:20px;
+}
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+.nav-links a:hover{
+    color:#00bcd4; 
+}
+.logo {
+    font-weight: 700;
+    color: #1a73e8; /* Un bleu plus vif */
+}
+/* HERO */
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(to right,#00bcd4,#2196f3);
+    color:white;
+ }
+
+ .profile { 
+    width: 170px;
+    height: 170px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    /* rend arondi et float */
+    display: block;
+    margin: 0 auto 20px auto;
+    transition: 0.5s ease;
+    animation: float 3s ease-in-out infinite;
+
+}
+
+.profile:hover {
+    transform: scale(1.1);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+ }
+ .btn{ 
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:white;
+    color:#2196f3;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+.btn:hover{
+    background:#ce2828;
+    color:white; */
+}
+
+/* SECTIONS */
+section{
+    padding:80px 40px;
+    text-align:center;
+}
+
+
+.skills-container{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+#about {
+    padding: 80px 10%; /* Plus d'espace pour respirer */
+    background: linear-gradient(135deg, #1a73e8, #00d2ff); /* Dégradé dynamique */
+    display: flex;
+    justify-content: center;
+}
+.about-content {
+    background: rgba(255, 255, 255, 0.1); /* Rectangle semi-transparent */
+    backdrop-filter: blur(15px); /* Effet de flou moderne */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.about-content:hover {
+    transform: translateY(-10px); /* Animation légère au survol */
+}
+#about h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+/* Petite barre décorative sous le titre */
+#about h2::after {
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: #ffce00; /* Jaune pour faire ressortir */
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+    border-radius: 10px;
+}
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 30px;
+}
+ .skill{
+    background:#2196f3;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px; */
+}
+/* COMPETENCES */
+/* Container principal des compétences */
+#skills {
+    padding: 60px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Suite du dégradé */}
+.skill {
+    /* Style de chaque badge de compétence (Effet Glass) */
+       background: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px; /* Forme pilule très moderne */
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation rebond */
+    cursor: default;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Suite du dégradé */s
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    
+    }
+#skills h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+/* Le conteneur Flexbox */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Animation au survol */
+.skill:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-8px) scale(1.05); /* Soulève et agrandit */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #ffce00; /* Change la bordure en jaune au survol */
+}
+
+.project-card{
+    background:#2196f3;
+    margin:20px auto;
+    padding:20px;
+    width:250px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+/* --- Section Projets --- */
+
+#projects {
+    padding: 80px 10%; /* Grand espacement vertical pour aérer */
+    text-align: center;
+    background-color: #47bdf3; /* Couleur de fond très claire pour différencier la section */
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* Container pour les cartes, utilise Flexbox pour l'alignement */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
+    justify-content: center;
+    gap: 30px; /* Espace entre les cartes */
+}
+
+/* --- Style de la Carte Projet (Base) --- */
+.project-card {
+    background-color: rgb(209, 210, 216);
+    border-radius: 15px; /* Coins arrondis modernes */
+    padding: 30px;
+    width: 300px; /* Largeur fixe pour les cartes, s'ajustera sur mobile avec flex-wrap */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Ombre très douce par défaut */
+    
+    /* --- PARTIE IMPORTANTE POUR L'ANIMATION --- */
+    transition: all 0.3s ease; /* Transition fluide sur toutes les propriétés (ombre, transformation) */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+/* --- Animation au Survol (Hover) --- */
+.project-card:hover {
+    transform: translateY(-10px); /* Soulève la carte de 10px vers le haut */
+    border: 1px solid #8fe81a; /*une bordure fine de la couleur  */
+}
+/* Style du titre à l'intérieur de la carte */
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #1a73e8; /* Couleur pour le titre */
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Pour que la couleur change aussi de manière fluide */
+}
+
+/* Style du texte à l'intérieur de la carte */
+.project-card p {
+    font-size: 1rem;
+    color: #eff3f3; /* Gris plus doux pour le texte */
+    line-height: 1.6; /* Meilleure lisibilité */
+}
+
+    .project-card {
+        width: 90%; /* Prend presque toute la largeur sur mobile */
+        margin: 10px auto;
+         background-color: #555;
+         /* Un gris plus foncé */ */
+     Ou utilisez rgba pour la transparence */
+     
+    }
+
+.contact-form{ 
+    width:300px;
+    margin:30px auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    box-shadow:0 3px 8px rgba(235, 240, 241, 0.1);
+    transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    transform:scale(1.03);
+    outline:none;
+}
+
+.contact-form button{
+    padding:12px;
+    border:none;
+    background:#2196f3;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#0d6efd;
+    transform:translateY(-3px);
+}/* Pour les tablettes et smartphones  */
+@media (max-width: 768px) {
+    
+    /* 1. La Navigation t */
+    .nav-links {
+        display: none; /* Cache le menu classique pour un futur menu burger */
+        /* Ou alors, on les réduit en taille */
+    }
+
+    /* 3. Sections : Moins de padding sur les côtés */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* 4. Les Grilles (Compétences & Projets) */
+    .skills-container {
+        flex-direction: column; /* Aligne les éléments verticalement */
+        align-items: center;
+    }
+}
+
+footer {
+    background-color: #00bcd4; /* Couleur de fond cyan de votre site */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+.social-links {
+    margin-top: 10px;
+}
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #e0e0e0; /* Couleur au survol */
+}
